@@ -11,4 +11,4 @@ This is a simple twitter client that shows all the tweets that a user's timeline
  * [x] User is taken back to home timeline with new tweet visible in timeline
 
 ## Demo.
-[demo](https://github.com/FrancisMengx/SimpleTwitterClient/blob/master/Demo.gif)
+![Demo](https://github.com/FrancisMengx/SimpleTwitterClient/blob/master/Demo.gif)
