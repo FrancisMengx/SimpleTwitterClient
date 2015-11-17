@@ -28,6 +28,26 @@ public class User {
     private long uid;
     private String screenName;
     private String profileImageUrl;
+    private String tagLine;
+    private int followers;
+    private int followings;
+    private int tweetsCount;
+
+    public String getTagLine() {
+        return tagLine;
+    }
+
+    public int getFollowers() {
+        return followers;
+    }
+
+    public int getFollowings() {
+        return followings;
+    }
+
+    public int getTweetsCount() {
+        return tweetsCount;
+    }
 
     public static User fromJson(JSONObject json) {
         User u = new User();
@@ -36,6 +56,10 @@ public class User {
             u.uid = json.getLong("id");
             u.screenName = json.getString("screen_name");
             u.profileImageUrl = json.getString("profile_image_url");
+            u.tagLine = json.getString("description");
+            u.followers = json.getInt("followers_count");
+            u.followings = json.getInt("friends_count");
+            u.tweetsCount = json.getInt("statuses_count");
         } catch (JSONException e) {
             e.printStackTrace();
         }
